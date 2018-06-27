@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <script type='application/javascript' src='fastClick/fastclick.js'></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="chronologicalAgeCalculator.css">
+  <title>Chronological Age Calculator</title>
+
+</head>
+
+<body>
+
+  <form>
+    <!-- Testing Date -->
+    <div>
+        <p>Testing Date</p>
+        <select id='testingMonth' onchange='updateDateObjects(this); setTestingDays(this);' name='testingMonth'></select>
+        <select id='testingDay' onchange='updateDateObjects(this)' name='testingDay'></select>
+        <select id='testingYear' onchange='updateDateObjects(this)' name='testingYear'></select>
+    </div>
+
+    <!-- Birth Date -->
+    <div>
+      <p>Birth Date</p>
+      <select id='birthMonth' onchange='updateDateObjects(this); setBirthDays(this);' name='birthMonth'></select>
+      <select id='birthDay' onchange='updateDateObjects(this)' name='birthDay'></select>
+      <select id='birthYear' onchange='updateDateObjects(this)' name='birthYear'></select>
+    </div>
+  </form>
+
+  <div style='cursor: pointer; margin: 20px 0; padding: 10px 0; background-color: rgba(12,212,100,1); text-align: center; width: 80px; border-radius: 5px;' onclick='displayCA();'>
+
+    Get CA
+
+  </div>
+
+  <div id='error' style='color: red;'></div>
+  <div id='chronologicalAgeDisplay'></div>
+
+</body>
+
+<script src="chronologicalAgeCalculator.js"></script>
+</html>
